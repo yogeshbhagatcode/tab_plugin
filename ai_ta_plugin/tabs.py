@@ -18,7 +18,8 @@ class AITab(EnrolledTab):
     @property
     def link_func(self):
         def _link_func(course, reverse_func):
-            return "http://apps.local.overhang.io:8080/ai/"
+            # return "http://apps.local.overhang.io:8080/ai/"
+            return f"http://{settings.MFE_CONFIG['BASE_URL']}:8080/ai/"
         return _link_func
 
     @classmethod
